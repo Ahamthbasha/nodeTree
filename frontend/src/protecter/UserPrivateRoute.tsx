@@ -12,6 +12,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
   const isAuthenticated = Boolean(user.userId && user.email);
 
   if (!isAuthenticated) {
+    // Redirect to login page if not authenticated
     return <Navigate to="/user/login" replace />;
   }
 

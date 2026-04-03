@@ -12,6 +12,7 @@ const UserSessionRoute: React.FC<UserSessionRouteProps> = ({ children }) => {
   const isAuthenticated = Boolean(user.userId && user.email);
 
   if (isAuthenticated) {
+    // Redirect to dashboard if already logged in
     return <Navigate to="/dashboard" replace />;
   }
 
