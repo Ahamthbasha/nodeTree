@@ -1,6 +1,6 @@
-import {type INodeService } from "./interface/INodeService";
-import {type INodeRepo } from "../../repositories/userRepo/nodeTreeRepo/InodeTreeRepo";
-import {type INode } from "../../models/NodeModel";
+import {type INodeService } from "./interface/INodeService.js";
+import {type INodeRepo } from "../../repositories/userRepo/nodeTreeRepo/InodeTreeRepo.js";
+import {type INode } from "../../models/NodeModel.js";
 
 export class NodeService implements INodeService {
   private _nodeRepo: INodeRepo;

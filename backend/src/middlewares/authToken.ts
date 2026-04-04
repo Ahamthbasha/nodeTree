@@ -1,8 +1,8 @@
 import {type Response,type NextFunction } from "express";
-import {type IJwtService } from "../services/commonService/interface/IJwtService"; 
-import { StatusCode } from "../utils/enums";
-import { AuthErrorMsg } from "../utils/constants"; 
-import {type AuthenticatedRequest } from "../interface/express"; 
+import {type IJwtService } from "../services/commonService/interface/IJwtService.js"; 
+import { StatusCode } from "../utils/enums.js";
+import { AuthErrorMsg } from "../utils/constants.js"; 
+import {type AuthenticatedRequest } from "../interface/express.js"; 
 
 export class AuthMiddleware {
   private _jwtService: IJwtService;

@@ -1,7 +1,7 @@
 import {type Request,type Response } from "express";
-import {type IUserController } from "./interface/IUserAuthController"; 
-import {type IUserService } from "../../services/userService/interface/IUserAuthService"; 
-import { ValidationHelper } from "../../utils/validation"; 
+import {type IUserController } from "./interface/IUserAuthController.js"; 
+import {type IUserService } from "../../services/userService/interface/IUserAuthService.js"; 
+import { ValidationHelper } from "../../utils/validation.js"; 
 export class UserController implements IUserController {
   private _userService: IUserService
   constructor(userService: IUserService) {

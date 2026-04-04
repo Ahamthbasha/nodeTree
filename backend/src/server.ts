@@ -1,10 +1,10 @@
 // Import env first to load environment variables
-import { env } from "./config/env";
+import { env } from "./config/env.js";
 import express from "express";
-import connectDB from "./config/db";
+import connectDB from "./config/db.js";
 import cors, { type CorsOptions } from "cors";
 import cookieParser from "cookie-parser";
-import userRouter from './routes/userRouter';
+import userRouter from './routes/userRouter.js';
 import morgan from "morgan";
 
 const app = express();

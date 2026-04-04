@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authMiddleware, userController, userNodeController} from "../config/dependencyInjector";
+import { authMiddleware, userController, userNodeController} from "../config/dependencyInjector.js";
 
 const router = Router()
 

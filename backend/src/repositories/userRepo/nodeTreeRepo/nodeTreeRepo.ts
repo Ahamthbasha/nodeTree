@@ -1,6 +1,6 @@
-import {type INodeRepo } from "./InodeTreeRepo";
-import { Node,type INode } from '../../../models/NodeModel';
-import { GenericRepo } from "../../genericRepo/genericRepo";
+import {type INodeRepo } from "./InodeTreeRepo.js";
+import { Node,type INode } from '../../../models/NodeModel.js';
+import { GenericRepo } from "../../genericRepo/genericRepo.js";
 import mongoose from "mongoose";
 
 export class NodeRepo extends GenericRepo<INode> implements INodeRepo {

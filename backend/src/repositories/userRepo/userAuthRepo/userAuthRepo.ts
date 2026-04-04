@@ -1,6 +1,6 @@
-import { GenericRepo } from '../../genericRepo/genericRepo'; 
-import {type IUserRepo } from '../userAuthRepo/IUserAuthRepo'
-import User, {type IUser } from '../../../models/userModel'
+import { GenericRepo } from '../../genericRepo/genericRepo.js'; 
+import {type IUserRepo } from '../userAuthRepo/IUserAuthRepo.js'
+import User, {type IUser } from '../../../models/userModel.js'
 
 export class UserRepo extends GenericRepo<IUser> implements IUserRepo {
   constructor() {

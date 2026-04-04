@@ -1,6 +1,6 @@
 import jwt, {type SignOptions } from "jsonwebtoken";
-import type { IJwtPayload, IJwtService, ITokens } from "./interface/IJwtService";
-import { env } from "../../config/env";
+import type { IJwtPayload, IJwtService, ITokens } from "./interface/IJwtService.js";
+import { env } from "../../config/env.js";
 
 export class JwtService implements IJwtService {
   private _accessSecret: string;

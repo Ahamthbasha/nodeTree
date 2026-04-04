@@ -1,5 +1,5 @@
 import { Model, Document,type ClientSession } from "mongoose";
-import {type IGenericRepo } from "./IGenericRepo";
+import {type IGenericRepo } from "./IGenericRepo.js";
 
 export class GenericRepo<T extends Document> implements IGenericRepo<T> {
   protected model: Model<T>;

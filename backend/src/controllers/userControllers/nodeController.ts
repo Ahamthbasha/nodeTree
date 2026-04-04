@@ -1,8 +1,8 @@
 import {type Response } from "express";
-import {type INodeController } from "./interface/INodeController";
-import {type INodeService } from "../../services/userService/interface/INodeService";
-import { StatusCode } from "../../utils/enums";
-import {type AuthenticatedRequest } from "../../interface/express";
+import {type INodeController } from "./interface/INodeController.js";
+import {type INodeService } from "../../services/userService/interface/INodeService.js";
+import { StatusCode } from "../../utils/enums.js";
+import {type AuthenticatedRequest } from "../../interface/express.js";
 
 export class NodeController implements INodeController {
   private _nodeService: INodeService;

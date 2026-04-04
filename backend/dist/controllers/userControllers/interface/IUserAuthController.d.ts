@@ -1,0 +1,6 @@
+import { type Request, type Response } from "express";
+export interface IUserController {
+    login(req: Request, res: Response): Promise<void>;
+    logout(req: Request, res: Response): Promise<void>;
+}
+//# sourceMappingURL=IUserAuthController.d.ts.map

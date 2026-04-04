@@ -1,4 +1,4 @@
-import {type INode } from "../../../models/NodeModel"; 
+import {type INode } from "../../../models/NodeModel.js"; 
 
 export interface INodeRepo {
   createNode(

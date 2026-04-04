@@ -1,0 +1,28 @@
+import {} from "../repositories/userRepo/userAuthRepo/IUserAuthRepo.js";
+import { UserRepo } from "../repositories/userRepo/userAuthRepo/userAuthRepo.js";
+import {} from "../services/userService/interface/IUserAuthService.js";
+import { UserService } from "../services/userService/userAuthService.js";
+import {} from "../controllers/userControllers/interface/IUserAuthController.js";
+import { UserController } from "../controllers/userControllers/userAuthController.js";
+import {} from "../services/commonService/interface/IHashService.js";
+import { HashService } from "../services/commonService/hashService.js";
+import {} from "../services/commonService/interface/IJwtService.js";
+import { JwtService } from "../services/commonService/jwtService.js";
+import { AuthMiddleware } from "../middlewares/authToken.js";
+import {} from "../repositories/userRepo/nodeTreeRepo/InodeTreeRepo.js";
+import { NodeRepo } from "../repositories/userRepo/nodeTreeRepo/nodeTreeRepo.js";
+import {} from "../services/userService/interface/INodeService.js";
+import { NodeService } from "../services/userService/nodeService.js";
+import {} from "../controllers/userControllers/interface/INodeController.js";
+import { NodeController } from "../controllers/userControllers/nodeController.js";
+const hashService = new HashService();
+const jwtService = new JwtService();
+const authMiddleware = new AuthMiddleware(jwtService);
+const userRepo = new UserRepo();
+const userService = new UserService(userRepo, hashService, jwtService);
+const userController = new UserController(userService);
+const userNodeRepo = new NodeRepo();
+const userNodeService = new NodeService(userNodeRepo);
+const userNodeController = new NodeController(userNodeService);
+export { userController, authMiddleware, userNodeController };
+//# sourceMappingURL=dependencyInjector.js.map
