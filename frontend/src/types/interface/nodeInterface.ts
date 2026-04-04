@@ -13,6 +13,7 @@ export interface ITreeNode {
   name: string;
   parentId: string | null;
   children: ITreeNode[];
+  isExpanded?:boolean;
   createdAt: string;
   updatedAt: string;
 }

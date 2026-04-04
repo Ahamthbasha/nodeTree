@@ -1,4 +1,4 @@
-// Import env first to load environment variables
+
 import { env } from "./config/env.js";
 import express from "express";
 import connectDB from "./config/db.js";
@@ -62,16 +62,16 @@ process.on("uncaughtException", (error: Error) => {
 const start = async (): Promise<void> => {
   try {
     await connectDB();
-    console.log("✅ Database connected successfully");
+    console.log("Database connected successfully");
 
     app.listen(env.PORT, () => {
-      console.log(`🚀 Server is running on port ${env.PORT}`);
-      console.log(`🌍 Frontend URL: ${env.FRONTEND_URL}`);
-      console.log(`📝 Logging mode: ${env.NODE_ENV}`);
+      console.log(`Server is running on port ${env.PORT}`);
+      console.log(`Frontend URL: ${env.FRONTEND_URL}`);
+      console.log(`Logging mode: ${env.NODE_ENV}`);
     });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
-    console.error("❌ Failed to start server:", errorMessage);
+    console.error("Failed to start server:", errorMessage);
     process.exit(1);
   }
 };
